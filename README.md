@@ -2,6 +2,7 @@
 This homework assignment gives you the opportunity to practice structures, classes, dynamic array creation, use of overloaded operators. Your program will read from an input file that contains account records. Each account record starts with a delimiter, which is the ‘#’ character, followed by the account number, followed by the number of owners, followed by one or more owner records (there is one record for each owner), followed by the number of transactions, followed by one or more transaction records (there is one record for each transaction). An owner record consists of the owner’s name followed by the owner’s DOB in mm/dd/yyyy format, followed the owner’s address. A transaction record consists of the transaction date, followed by the transaction type (1 for account creation, 2 for deposit, and 3 for withdrawal), followed by the amount. The various fields are separated by a white space, except for the owner’s name and address, which are surrounded by a new line. Below is an example of account record. The // comments are added for clarification, but are not part of the file content. 
 
 #
+"#"
 1200 // account number 
 2 // number of owners 
 Kirk // owner’s name 
