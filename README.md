@@ -23,6 +23,7 @@ This class is as defined in HW8, implement in-line in Date.h
 This class is adapted from HW7. The additions with respect to HW7 are in boldface italics. Implement in-line in Account.h struct 
 
 Transaction {  Date transactionDate;  int type;  double amount; }; 
+
 struct Person {  string name;  Date DOB;  string address; }; 
 
 The class Account has the following private member variables:  
@@ -47,4 +48,31 @@ The public member functions new with respect to HW7 are defined as follows.
 
 # 3. Stand-alone Functions (in main.cpp) 
 You should implement the following stand-alone functions. 
-/* This function takes as argument a string representing a date in the mm/dd/yyyy format and returns the month as an int The argument string is assumed properly formatted and no input validation is required */ int getMonth(string d) {  // Function body } /* This function takes as argument a string representing a date in the mm/dd/yyyy format and returns the day as an int The argument string is assumed properly formatted and no input validation is required */ int getDay(string d) {  // Function body } /* This function takes as argument a string representing a date in the mm/dd/yyyy format and returns the year as an int The argument string is assumed properly formatted and no input validation is required */ int getYear(string d) {  // Function body } /* This function reads from an account file and populates an array of Account objects (not an array of pointers to Account) with all the owners and transactions data read from the file. The owner data is the owner’s name, DOB and address. The transaction data is the transaction date, transaction type (account creation, deposit, withdrawal), and transaction amount. For each account, the function should dynamically allocate an array of Transaction of size equal to the number of transactions, assign the array’s address to transacPtr, and populate the array with the transaction data. In the array, the transactions should be sorted by date (oldest first). It takes as arguments the file name, the array and the size of the array. It returns true if file open is successful, false otherwise. It should close the file when done */ bool readAccounts(string fname, Account accntPtr [], int numAccnts) {  // Function body } /* This function reads from a file to determine the number of accounts It returns -1 if file open is unsuccessful, else it returns the number of accounts */ int determineNumAccounts(string fname) {  // Function body } 4. Outline of main Call determineNumAccounts to determine the number of account records in the file Dynamically create an array of Account of size equal to the number of accounts, to hold the Account objects (note this is an array of Account, not an array of pointers to Account), Call readAccounts to read data from the file and populate the array of Accounts. Read the populated array of Accounts to display for each account the account number, along with the data for all the owners, and the data for all the transactions. The owner data is the owner’s name, DOB and address. The transaction data is the transaction date, transaction type (account creation, deposit, withdrawal), and transaction amount. Additionally, the new balance resulting from each transaction is displayed. The transactions should be listed by date, the oldest transaction being listed first.
+/* This function takes as argument a string representing a date in the mm/dd/yyyy format and returns the month as an int The argument string is assumed properly formatted and no input validation is required */ 
+
+int getMonth(string d) {  // Function body } 
+
+/* This function takes as argument a string representing a date in the mm/dd/yyyy format and returns the day as an int The argument string is assumed properly formatted and no input validation is required */ 
+
+int getDay(string d) {  // Function body } 
+
+/* This function takes as argument a string representing a date in the mm/dd/yyyy format and returns the year as an int The argument string is assumed properly formatted and no input validation is required */ 
+
+int getYear(string d) {  // Function body } 
+
+/* This function reads from an account file and populates an array of Account objects (not an array of pointers to Account) with all the owners and transactions data read from the file. The owner data is the owner’s name, DOB and address. The transaction data is the transaction date, transaction type (account creation, deposit, withdrawal), and transaction amount. For each account, the function should dynamically allocate an array of Transaction of size equal to the number of transactions, assign the array’s address to transacPtr, and populate the array with the transaction data. In the array, the transactions should be sorted by date (oldest first). It takes as arguments the file name, the array and the size of the array. It returns true if file open is successful, false otherwise. It should close the file when done */ 
+
+bool readAccounts(string fname, Account accntPtr [], int numAccnts) {  // Function body } 
+
+/* This function reads from a file to determine the number of accounts It returns -1 if file open is unsuccessful, else it returns the number of accounts */
+
+int determineNumAccounts(string fname) {  // Function body } 
+
+# 4. Outline of main 
+Call determineNumAccounts to determine the number of account records in the file 
+
+Dynamically create an array of Account of size equal to the number of accounts, to hold the Account objects (note this is an array of Account, not an array of pointers to Account).
+
+Call readAccounts to read data from the file and populate the array of Accounts. 
+
+Read the populated array of Accounts to display for each account the account number, along with the data for all the owners, and the data for all the transactions. The owner data is the owner’s name, DOB and address. The transaction data is the transaction date, transaction type (account creation, deposit, withdrawal), and transaction amount. Additionally, the new balance resulting from each transaction is displayed. The transactions should be listed by date, the oldest transaction being listed first.
